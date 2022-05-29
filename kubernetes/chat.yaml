@@ -13,7 +13,7 @@ spec:
     spec: 
       containers:
         - name: chatapp-chat
-          image: chat-api:latest
+          image: luccaboets/chat-api:latest
           ports:
             - containerPort: 3000
               name: http-web-svc
