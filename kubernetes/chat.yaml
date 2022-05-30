@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: chatapp-chat
+  name: chat
 spec:
   selector: 
     matchLabels:
-      app: chatapp-chat
+      app: chat
   template:
     metadata:
       labels:
-        app: chatapp-chat
+        app: chat
     spec: 
       containers:
-        - name: chatapp-chat
+        - name: chat
           image: luccaboets/chat-api:latest
           ports:
             - containerPort: 3000
@@ -21,10 +21,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: chatapp-chat
+  name: chat
 spec:
   selector: 
-    app: chatapp-chat
+    app: chat
   ports:
     - name: static
       protocol: TCP
